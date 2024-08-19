@@ -4,6 +4,7 @@ metadata:
   labels:
     app: copy-solar-system
   name: copy-solar-system
+  namespace: solar-system
 spec:
   replicas: 1
   selector:
