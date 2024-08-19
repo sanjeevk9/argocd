@@ -14,17 +14,7 @@ spec:
       - path: apps/*
       - path: declarative
         exclude: true
-      - path: health-check
-        exclude: true
-      - path: helm-chart
-        exclude: true
-      - path: jenkins-demo
-        exclude: true
-      - path: nginx-app
-        exclude: true
-      - path: sealed-secret
-        exclude: true
-      - path: vault-secrets
+      - path: apps/solar-system2
         exclude: true
   template:
     metadata:
@@ -33,7 +23,7 @@ spec:
       project: "my-project"
       source:
         repoURL: https://github.com/sanjeevk9/argocd.git
-        targetRevision: main
+        targetRevision: HEAD
         path: '{{.path.path}}'
       destination:
         server: https://kubernetes.default.svc
@@ -41,3 +31,4 @@ spec:
       syncPolicy:
         syncOptions:
         - CreateNamespace=true
+        automated: {}
