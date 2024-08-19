@@ -33,7 +33,7 @@ spec:
       project: "my-project"
       source:
         repoURL: https://github.com/sanjeevk9/argocd.git
-        targetRevision: HEAD
+        targetRevision: main
         path: '{{.path.path}}'
       destination:
         server: https://kubernetes.default.svc
