@@ -12,8 +12,6 @@ spec:
       revision: HEAD
       directories:
       - path: apps/*
-      - path: declarative
-        exclude: true
       - path: apps/solar-system2
         exclude: true
   template:
